@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ Title }}</title>
+</head>
+<body>
+    <h3>Cautare stiri:</h3>
+    <form action="{{ url_for('search_newss') }}" method="POST">
+    <input type="text" name="search" placeholder="Introduceti termenul de cautare">
+        <button type="submit">Cauta</button>
+    </form>
+
+    {% if newss %}
+        <h4>Rezultatele cautarii pentru "{{ search }}":</h4>
+        <ul>
+            {% for news in newss %}
+                <li>{{ news.titlu }} - {{ news.link }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Nu s-au gasit rezultate pentru "{{ search }}".</p>
+    {% endif %}
+</body>
+</html>

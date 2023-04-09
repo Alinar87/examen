@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if news %}
+
+
+
+        <tr><th>Titlu</th><td>{{news[1]}}</td>
+            <th>Website</th><td>{{news[2]}}</td>
+            <th>Link</th><td><a href="link/{{news[3]}}"></a></td>
+        </tr>
+
+{% else %}
+    <div class="error">Stire inexistenta</div>
+{% endif %}
+
+{% endblock content %}

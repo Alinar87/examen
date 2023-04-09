@@ -1,0 +1,46 @@
+<!-- home.html -->
+{% extends "layout.html" %}
+{% block content %}
+
+<html lang="en">
+<head>
+ <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<form action="/search/" method="post">
+    <input type="text" name="search" placeholder="cauta" value="{{search}}" style="float: right;">
+
+    {% if search %}
+    Rezultatele cautarii dupa <i>"{{search}}"</i>:
+    {% else %}
+       Stiri:
+    {% endif %}
+
+</form>
+<br>
+
+    <a href="tips_and_tricks">
+        <figure>
+        <img src="static/poze/image7.JPG" alt="Tips & tricks";>
+          <div style="color:#FFF; font-weight:bold; font-size:20px;">Tips & Tricks</div>
+        </figure>
+    </a>
+   <a href="beauty">
+       <figure>
+        <img src="static/poze/image8.JPG";>
+        <div style="color:#FFF; font-weight:bold; font-size:20px;">Beauty</div>
+        </figure>
+   </a>
+     <a href="calatorii">
+         <figure>
+        <img src="static/poze/image9.jpg";>
+          <div style="color:#FFF; font-weight:bold; font-size:20px;">Calatorii</div>
+        </figure>
+     </a>
+ </div>
+
+
+{% endblock content %}
+</body>
+</html>

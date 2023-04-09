@@ -1,0 +1,73 @@
+<!-- layout.html: layout file common for all html files -->
+<html>
+<head>
+        <title>Carlamaria</title>
+  <h3 style="text-align: center; font-size: 40px; background-image: url('static/poze/image6.jpg'); background-repeat: no-repeat;
+             background-size: cover; padding: 50px;"
+             ><i>Carla</i><br><br>
+            <i>Despre pasiuni, fashion, viata de adolescent</i></h3><br><br>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+
+</head>
+<body style="max-width: 960px; margin: 0 auto;">
+<aside style="height: 1700px; font-text: italic;">
+   <p>Trebuie sa-ti doresti sa fii puternic. Altfel, nu vei ajunge niciodata asa. (Friedrich Nietzsche)</p>
+    <div class="month">
+  <ul>
+    <li class="prev">&#10094;</li>
+    <li class="next">&#10095;</li>
+    <li>Aprilie<br><span style="font-size:18px">2023</span></li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li>Mo</li>
+  <li>Tu</li>
+  <li>We</li>
+  <li>Th</li>
+  <li>Fr</li>
+  <li>Sa</li>
+  <li>Su</li>
+</ul>
+
+<ul class="days">
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+  <li><span class="active">11</span></li>
+  <li>12</li>
+  ...etc
+</ul>
+
+</aside>
+<hr>
+
+<div style="text-align: center; font-size: 25px; background: ; padding: 20px;">
+
+    <a href="acasa">Acasa</a>
+    <a href="despre_mine">Despre mine</a>
+    <a href="galerie">Galerie</a>
+    <a href="contact">Contact</a>
+
+</div>
+
+<hr>
+    <a  class="social-icon" href="https://instagram.com/carlaxrotar">
+        <ion-icon name="logo-instagram"></ion-icon>
+    </a>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+{% block content %}{% endblock %}
+</body>
+</html>
